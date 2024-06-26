@@ -102,7 +102,7 @@ with open('encrypted_data', 'wb') as f:
 with open('encrypted_data', 'rb') as f:
     encrypted_data = f.read()
     
-rsa = RSA(103, 3259)
+rsa = RSA(101, 3259)
 decrypted_text = rsa.decrypt(encrypted_data)
 
 with open('decrypted.txt', 'wb') as f:
