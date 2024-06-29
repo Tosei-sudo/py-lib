@@ -25,11 +25,15 @@ class RSAKey(object):
 
 class RSAKeyPair(object):
     def __init__(self, p, q):
-        '''
-        与えられた 2 つの素数 p, q から秘密鍵と公開鍵を生成する。
-        @param p: int
-        @param q: int
-        '''
+        """ RSA暗号の鍵ペアを生成する
+
+        Args:
+            p (int): key1
+            q (int): key2
+
+        Raises:
+            KeyGenerationError: p または q が素数でない場合
+        """
         
         if not is_prime(p) or not is_prime(q):
             raise KeyGenerationError('p and q must be prime numbers')
