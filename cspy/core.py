@@ -14,4 +14,11 @@ def FileDialog(filter_str='All files (*.*)|*.*', multi_select=False):
     
     return selected_file
 
-print(FileDialog())
+def FolderDialog():
+    exe_path = BIN_PATH + 'FolderDialog.exe'
+    
+    selected_file = subprocess.check_output([exe_path]).strip().split('\r\n')
+    
+    return selected_file
+
+print(FolderDialog())

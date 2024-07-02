@@ -39,5 +39,7 @@ class FileDialog
                 Console.WriteLine(openFileDialog.FileName);
             }
         }
+
+        openFileDialog.Dispose();
     }
 }
